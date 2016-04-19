@@ -623,4 +623,18 @@ public class CSSCompiler {
             }
         };
     }
+
+    public static Map<String, String> parseInlineCSS(String inlineStyle){
+        Map<String, String> styles = new HashMap();
+        if (TextUtils.isEmpty(inlineStyle)) return  styles;
+
+        String[] parts = inlineStyle.split(";");
+        for (String part : parts) {
+            if (!TextUtils.isEmpty(part) && part.contains(":")){
+                int segmentationPosition = part.indexOf(":");
+                styles.put(part.substring(0, segmentationPosition).trim(), part.substring(segmentationPosition + 1).trim());
+            }
+        }
+        return styles;
+    }
 }
