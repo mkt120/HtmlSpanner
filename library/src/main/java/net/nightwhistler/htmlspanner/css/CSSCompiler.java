@@ -1,6 +1,7 @@
 package net.nightwhistler.htmlspanner.css;
 
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.util.Log;
 import com.osbcp.cssparser.PropertyValue;
 import com.osbcp.cssparser.Rule;
@@ -12,7 +13,9 @@ import net.nightwhistler.htmlspanner.style.StyleValue;
 import org.htmlcleaner.TagNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Compiler for CSS Rules.
@@ -620,5 +623,4 @@ public class CSSCompiler {
             }
         };
     }
-
 }

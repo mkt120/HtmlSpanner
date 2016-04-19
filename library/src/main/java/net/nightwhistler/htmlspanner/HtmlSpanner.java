@@ -378,7 +378,8 @@ public class HtmlSpanner {
         registerHandler("tt", monSpaceHandler);
         registerHandler("code", monSpaceHandler);
 
-        registerHandler("style", new StyleNodeHandler() );
+        registerHandler("style", new StyleNodeHandler());
+        registerHandler("span", new CSSStyledTextHandler());
 
         //We wrap an alignment-handler to support
         //align attributes
